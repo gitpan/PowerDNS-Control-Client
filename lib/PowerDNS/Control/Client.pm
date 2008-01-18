@@ -1,4 +1,4 @@
-# $Id: Client.pm 1583 2007-12-31 20:18:45Z augie $
+# $Id: Client.pm 1627 2008-01-18 19:28:30Z augie $
 # Provides an interface to communicate with PowerDNS::Control::Server which
 # is used to control both the Authoritative and Recursive servers.
 
@@ -17,11 +17,11 @@ PowerDNS::Control::Client - Provides an interface to control the PowerDNS daemon
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -299,6 +299,8 @@ L<http://search.cpan.org/dist/PowerDNS-Control-Client>
 
 =head1 ACKNOWLEDGEMENTS
 
+I would like to thank Sonic.net for allowing me to release this to the public.
+
 =head1 COPYRIGHT & LICENSE
 
 Copyright 2007 Augie Schwer, all rights reserved.
@@ -308,8 +310,8 @@ under the same terms as Perl itself.
 
 =head1 VERSION
 
-        0.01
-        $Id: Client.pm 1583 2007-12-31 20:18:45Z augie $
+        0.02
+        $Id: Client.pm 1627 2008-01-18 19:28:30Z augie $
 
 =cut
 

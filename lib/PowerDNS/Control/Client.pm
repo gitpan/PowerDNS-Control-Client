@@ -1,4 +1,4 @@
-# $Id: Client.pm 1627 2008-01-18 19:28:30Z augie $
+# $Id: Client.pm 4435 2012-01-14 01:13:46Z augie $
 # Provides an interface to communicate with PowerDNS::Control::Server which
 # is used to control both the Authoritative and Recursive servers.
 
@@ -17,11 +17,11 @@ PowerDNS::Control::Client - Provides an interface to control the PowerDNS daemon
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
@@ -210,6 +210,21 @@ sub auth_retrieve
 	return $self->tell("auth_retrieve $domain");
 }
 
+=head2 auth_wipe_cache($domain)
+
+Tells the Authoritative PowerDNS server to wipe $domain out of its cache.
+Expects a scalar domain name.
+Returns 0 on success, error message otherwise.
+
+=cut
+
+sub auth_wipe_cache
+{
+	my $self = shift;
+	my $domain = shift;
+	return $self->tell("auth_wipe_cache $domain");
+}
+
 =head2 rec_wipe_cache($domain)
 
 Tells the Recursive PowerDNS server to wipe $domain out of its cache.
@@ -310,8 +325,8 @@ under the same terms as Perl itself.
 
 =head1 VERSION
 
-        0.02
-        $Id: Client.pm 1627 2008-01-18 19:28:30Z augie $
+        0.03
+        $Id: Client.pm 4435 2012-01-14 01:13:46Z augie $
 
 =cut
 
